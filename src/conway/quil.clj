@@ -44,7 +44,7 @@
       (q/fill (if (= (nth (nth world r) c) "*") 0 255))
       (q/rect (* r 10) (* c 10) 10 10))))
 
-(defn life []
+(defn life [opts]
   (q/defsketch life
     :host "host"
     :size [200 200]
@@ -53,4 +53,4 @@
     :draw draw-world
     :middleware [m/fun-mode]))
 
-#_(life)
+#_(life {}) ;; must take an argument
